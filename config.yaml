@@ -1,1 +1,30 @@
+model:
+  backbone: vit_b_16
+  adapter_hidden_dim: 64
+  ctrans_heads: 8
+  dropout: 0.3
+  drop_path: 0.1
 
+training:
+  epochs: 150
+  batch_size: 16
+  lr: 0.0001
+  weight_decay: 0.0001
+  patience: 20
+  loss_dice_weight: 0.5
+  loss_ce_weight: 0.5
+
+data:
+  input_size: [224, 224]
+  hu_min: -125
+  hu_max: 275
+  train_split: 18
+  val_split: 6
+  test_split: 6
+
+augmentation:
+  flip_prob: 0.5
+  rotate_range: 30
+  zoom_range: [0.85, 1.15]
+  noise_std: 0.01
+  gamma_range: [0.7, 1.5]
