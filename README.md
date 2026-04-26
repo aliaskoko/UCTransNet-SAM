@@ -36,7 +36,3 @@ python train.py --dataset synapse --epochs 150 --batch_size 16
 ```bash
 python inference.py --input path/to/volume.nii.gz --output results/
 ```
-
-## Citation
-If you use this work, please cite:
-Zunaira Hameed, Abdullah Zulfiqar, "UCTransNet-SAM: A Hybrid CNN-Transformer Architecture...", CV Assignment 3, April 2025.
